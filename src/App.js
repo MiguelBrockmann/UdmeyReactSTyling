@@ -13,15 +13,15 @@ const App = () => {
   const addGoalHandler = enteredText => { // wird unten aufgerufen enteredText bekommt infos aus <CourseInput , ist praktisch was im inputfel geschrieben wurde nach submit
     setCourseGoals(prevGoals => { // addte alte und neue goals
       const updatedGoals = [...prevGoals];
-      updatedGoals.unshift({ text: enteredText, id: Math.random().toString() });
+      updatedGoals.unshift({ text: enteredText, id: Math.random().toString() }); //unshift packt sache am anfang des arrays geben den ne rndm id
       return updatedGoals;
     });
   };
 
-  const deleteItemHandler = goalId => {  //wird von CourseGoalList aufgerufen bekommt goalId wert von da
-    console.log(goalId,"goal")
+  const deleteItemHandler = goalId => {  //wird von CourseGoalList aufgerufen bekommt goalId wert von da, kommt wenn wir auf goal klicken zum löschen gibt uns jew id
     setCourseGoals(prevGoals => {
-      const updatedGoals = prevGoals.filter(goal => goal.id !== goalId);
+      const updatedGoals = prevGoals.filter(goal => goal.id !== goalId); //will alle haben ausser dem mit der gleichen id der soll weg
+      //console.log(updatedGoals,"blee") //updatedgoals ist ein array mit den restlichen einträgen ohne dem gelöschten
       return updatedGoals;
     });
   };
