@@ -4,7 +4,7 @@ import CourseGoalItem from '../CourseGoalItem/CourseGoalItem';
 import './CourseGoalList.css';
 
 const CourseGoalList = props => {
-  //console.log(props.onDeleteItem,"bluu")
+  /*console.log(props.onDeleteItem,"bluu") /!* ganze fkt deleteItemHandler *!/*/
   return (
     <ul className="goal-list">
       {props.items.map(goal => (  /* iterieren durch array objekt */
