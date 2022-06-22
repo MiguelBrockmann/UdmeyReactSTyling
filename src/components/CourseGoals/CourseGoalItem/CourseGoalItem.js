@@ -5,7 +5,7 @@ import './CourseGoalItem.css';
 const CourseGoalItem = props => {
 
   const deleteHandler = () => {
-    props.onDelete(props.id); // ruft fkt von papa auf mit der id von papa, was nachher in para steht ist die props.id
+    props.onDelete(props.id); // ruft fkt von papa auf mit der id von papa, was nachher in para steht ist die props.id, props id ist jenachdem was wir geklcikt haben
     //olly fragen
   };
 
